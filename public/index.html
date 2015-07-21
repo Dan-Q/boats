@@ -3,10 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <title>Boats</title>
+    <style tyle="text/css">
+      .hidden-at-start {
+        display: none;
+      }
+
+      body.finding-server  #finding-server,
+      body.connecting  #connecting,
+      body.connected #boat {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="finding-server">
+    <div id="finding-server" class="hidden-at-start">
+      Finding server...
+    </div>
+
+    <div id="connecting" class="hidden-at-start">
+      Connecting...
+    </div>
+
+    <div id="boat" class="hidden-at-start">
+      X: <input type="numeric" id="x" /><br />
+      Y: <input type="numeric" id="y" /><br />
+      Angle: <input type="numeric" id="angle" /><br />
+      Target angle: <input type="numeric" id="targetAngle" class="controllable" /><br />
+      Speed: <input type="numeric" id="speed" /><br />
+      Target speed: <input type="numeric" id="targetSpeed" class="controllable" /><br />
+    </div>
+
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script src="boats.js"></script>
-  </head>
-  <body>
   </body>
 </html>
